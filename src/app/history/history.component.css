@@ -1,0 +1,6 @@
+.history-dropdown {
+  padding: 0.25rem;
+  max-height: 100px;
+  overflow-y: auto;
+  width: 50%;
+}

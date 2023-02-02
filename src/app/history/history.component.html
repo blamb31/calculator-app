@@ -1,0 +1,12 @@
+<select
+  (change)="selectHistorical($event)"
+  [(ngModel)]="selectedHistory"
+  class="history-dropdown"
+  name="history"
+  id="history"
+>
+  <option selected value="history">History</option>
+  <option *ngFor="let h of history.stack" [value]="h">
+    {{ h }}
+  </option>
+</select>

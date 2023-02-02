@@ -1,0 +1,30 @@
+<div class="calc-body">
+  <!-- Dropdowns Area -->
+  <div class="dropdowns">
+    <app-history
+      (calculateHistory)="handleHistory($event)"
+      [history]="history.value"
+      class="dropdowns"
+    ></app-history>
+  </div>
+
+  <!-- Display Area -->
+  <ng-container>
+    <app-display
+      [lastExpression]="lastExpression.value"
+      [display]="display.value"
+      [selectedOperator]="selectedOperator.value"
+      class="area-fill"
+    ></app-display>
+  </ng-container>
+
+  <!-- //Buttons Area -->
+  <app-keypad
+    (numberClicked)="handleNumberClick($event)"
+    (operatorClicked)="handleOperatorClick($event)"
+    class="area-fill buttons-area"
+    [numbers]="numbers"
+    [operators]="operators"
+  ></app-keypad>
+</div>
+{{ selectedOperator.value }}

@@ -1,0 +1,15 @@
+<div class=" disp-area">
+<div class="last-expression">
+  <ng-container *ngIf="lastExpression">
+    {{ lastExpression }}
+  </ng-container>
+</div>
+<div class="nums-operator">
+  <div class="numbers-disp">
+    {{ display | number: '1.0-5' }}
+  </div>
+  <div class="operator-disp">
+    {{ selectedOperator }}
+  </div>
+</div>
+</div>

@@ -1,0 +1,23 @@
+<div class=" buttons-area">
+  <div class="numbers">
+    <ng-container *ngFor="let b of numbers">
+      <app-button
+        (click)="numberClicked.emit(b)"
+        [content]="b"
+        class="calc-number calc-button"
+      >
+      </app-button>
+    </ng-container>
+  </div>
+  <div class="operators">
+    <ng-container *ngFor="let o of operators">
+      <app-button
+        *ngIf="o !== 'enter'"
+        (click)="operatorClicked.emit(o)"
+        [content]="o"
+        class="calc-operator calc-button"
+      >
+      </app-button>
+    </ng-container>
+  </div>
+</div>
